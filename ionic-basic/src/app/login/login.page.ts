@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { User } from '../models/user';
 import { ModalErrorComponent } from '../componentes/modal-error/modal-error.component';
 import { ModalController } from '@ionic/angular';
@@ -42,7 +41,7 @@ export class LoginPage implements OnInit {
     this.autSvc.onLogin(this.user).then((user:any)=>{
       if(user!=null && user.code ==undefined){
         console.log('Successfully logged in!');
-        this.router.navigate(['/presupuesto']);
+        this.router.navigate(['main/presupuesto']);
       }
       else{
         if(user.code){
